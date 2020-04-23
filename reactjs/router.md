@@ -254,7 +254,7 @@ const AsyncNewPost = asyncComponent(() => {
 <Route path="/new-post" component={AsyncNewPost} />
 ```
 
-2. yöntemde ise react v16.6 den gelen yeni özellikler ile birlikte aşağıdaki gibi kullanılabilir. Yine bu versiyonla gelen Suspense özelliği ise component yüklenene kadar işlem yapılmasını sağlar. 
+2. yöntemde ise react v16.6 ve sonrasında gelen yeni özellikler ile birlikte aşağıdaki gibi kullanılabilir. Yine bu versiyonla gelen Suspense özelliği ise component yüklenene kadar işlem yapılmasını sağlar. 
 
 ```javascript
 import React, { Component, Suspense } from 'react';
