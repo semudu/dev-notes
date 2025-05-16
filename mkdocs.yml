@@ -1,0 +1,13 @@
+site_name: "My Dev Notes"
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Java: java/index.md
+  - Spring: spring/index.md
+  - Middleware: middleware/index.md
+  - Cloud: cloud/index.md
+  - Architecture: architecture/index.md
+  - AI: ai/index.md
+plugins:
+  - search
