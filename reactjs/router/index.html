@@ -1,0 +1,706 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Router - My Dev Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Dev Notes" class="md-header__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Dev Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Router
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Dev Notes" class="md-nav__button md-logo" aria-label="My Dev Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Dev Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Java
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../middleware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../react/router.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    React
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Router</h1>
+
+<ul>
+<li>
+<p>Reactta tek html dosyası üzerinden çok sayfa gösterimi yapılır (Multiple Pages in SPAs) </p>
+</li>
+<li>
+<p>/blog /about /user/1 vs gibi pathler parse edilerek sayfa tekrar render edilir. Bu sayfaların hiçbiri gerçek bir html sayfası değildir.</p>
+</li>
+</ul>
+<pre><code class="language-javascript">npm install --save react-router-dom
+</code></pre>
+<ul>
+<li>
+<p>Route componenti çoklanarak hangi pathte ne yapılacağı yazılır. </p>
+</li>
+<li>
+<p><strong>exact</strong> parametresi render methodunun sadece bu pathte çalışmasını sağlar, eğer bu path ile başlayan tüm pathlerde çalışması gerekiyorsa bu parametre kullanılmaz.</p>
+</li>
+<li>
+<p>Aşağıdaki örnekte / pathinde Home ve Home 2 görünürken /xyz pathinde sadece Home 2 görünür.</p>
+</li>
+</ul>
+<pre><code class="language-javascript">import {Route} from 'react-router-dom';
+
+//...
+
+&lt;Route path=&quot;/&quot; exact render={() =&gt; &lt;h1&gt;Home&lt;/h1&gt;}/&gt;
+&lt;Route path=&quot;/&quot; render={() =&gt; &lt;h1&gt;Home 2&lt;/h1&gt;}/&gt;
+
+&lt;Route path=&quot;/&quot; exact component={ABCComponent}/&gt;
+</code></pre>
+<ul>
+<li>Eğer pathler <code>&lt;a&gt;</code> tagi ile tanmlanırsa browser davranışı sebebiyle sayfe her seferinde komple yenilenir. bu durumun üstesinden gelmek, sadece sayfanın ilgili bölümünün yeniden yüklenmesini sağlamak için router ın <code>&lt;Link&gt;</code> componenti kullanılır. </li>
+</ul>
+<pre><code class="language-javascript">import {Route, Link} from 'react-router-dom';
+
+//...
+
+&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;
+</code></pre>
+<ul>
+<li>Routing propertileri <strong>(history, location, match)</strong> alt komponentlere de taşınmak isteniyorsa <strong>withRouter</strong> HOC(High Order Component) i eklenmesi gerekir.</li>
+</ul>
+<pre><code class="language-javascript">import {withRouter} from 'react-router-dom';
+
+//...
+
+export default withRouter(post);
+</code></pre>
+<hr />
+<p><strong>Absolute Path vs Relative Path</strong></p>
+<ul>
+<li>Absolute path <code>&lt;Link to="/new" ...</code> şeklinde tanımladığımız her tıkladığında context pathi replace eden klasik tanımlama şekli <code>example.com/new</code> gibi.</li>
+<li>Relative path ise dinamik oluşturulan ve sonuna eklenerek devam eden url anlamına geliyor. <em>/new</em>  pathini dinamik olarak sona eklemek istediğimiz durumlarda <code>&lt;Link to={props.match.url + '/new'}&gt;</code> şeklinde bir tanımlama yapabiliriz. Bu sayede <code>example.com/posts/new</code> ya da <code>example.com/all-posts/new</code> şeklinde pathleri de kampsam içine almış oluruz.</li>
+<li>Absolute ya da Relative daha iyidir gibi bir durum yoktur, isteğe ve ihtiyaca bağlı olarak kullanılır.</li>
+</ul>
+<hr />
+<ul>
+<li><strong>NavLink</strong> componenti <strong>Link</strong> gibi çalışır fakat genellikle menü amaçlı kullanılır ve aktif olan menu linkine default olarak <strong>active</strong> classını ekler. Bu sayede seçili menü ile ilgili farklı css yazılabilir. <strong>axact</strong> parametresi active classının sadece seçili olduğu zaman eklenmesi için kullanılır, kullanılmaz ise seçili olmadığında da eklenir. <strong>activeClassName</strong> parametresi opsiyoneldir, yazılmadığında default active classı kullanılır. <strong>activeStyle</strong> parametresiyle de inline style uygulanabilir.</li>
+</ul>
+<pre><code class="language-javascript">&lt;NavLink 
+        to=&quot;/&quot; 
+        exact
+        activeClassName=&quot;active&quot;
+        activeStyle={{
+            color: '#fa923f',
+            textDecoration: 'underline'
+        }}&gt;
+    Home
+&lt;/NavLink&gt;
+</code></pre>
+<hr />
+<p><strong>Dinamik Parametre Geçişi</strong></p>
+<p><em>Sayfalar arası </em>id* gibi dinamik parametre geçişleri için,</p>
+<pre><code class="language-javascript">&lt;Route path=&quot;/:id&quot; exact component={FullPost} /&gt;
+</code></pre>
+<p>şeklinde tanımlama yapmak gerekir. Bu sayfaya yapılan yönlendirme linki</p>
+<pre><code class="language-javascript">&lt;Link to={'/' + post.id}&gt;
+    &lt;Post
+        title={post.title}
+        author={post.author}
+        clicked={() =&gt; this.postSelectedHandler(post.id)} /&gt;
+&lt;/Link&gt;;
+</code></pre>
+<p>ya da kodlama ile yönlendirmek yapmak için</p>
+<pre><code class="language-javascript">this.props.history.push({pathname: '/' + id});
+//this.props.history.push('/' + id);
+</code></pre>
+<p>kullanılabilir.</p>
+<blockquote>
+<p><strong><em>Not:</em></strong> <em>history objesi navigasyon için kullanılır. içinde </em>go, goBack, goForward, push<em> gibi fonksiyonlar vardır.</em></p>
+</blockquote>
+<p>Parametrelere  ulaşmak için <code>match.params.paramter_name</code> kullanılır</p>
+<pre><code class="language-javascript">componentDidMount () {
+    if ( this.props.match.params.id ) {
+        if ( !this.state.loadedPost 
+            || (this.state.loadedPost 
+                &amp;&amp; this.state.loadedPost.id !== this.props.id) ) {
+
+            axios.get( '/posts/' + this.props.match.params.id )
+                .then( response =&gt; {
+                    this.setState({ 
+                        loadedPost: response.data 
+                    });
+                });
+
+        }
+    }
+}
+</code></pre>
+<ul>
+<li><code>?something=somevalue</code> şeklinde oluşan <em>query</em> parametrelerinin oluşturulması ve parse edilmesi;</li>
+</ul>
+<p>parametrelerin yollanması</p>
+<pre><code class="language-javascript">&lt;Link to=&quot;/my-path?start=5&quot;&gt;Go to Start&lt;/Link&gt; 
+</code></pre>
+<p>ya da</p>
+<pre><code class="language-javascript">&lt;Link 
+    to={‌{
+        pathname: '/my-path',
+        search: '?start=5'
+    }}&gt;
+    Go to Start
+&lt;/Link&gt;
+</code></pre>
+<p>parametrelerin alınması</p>
+<pre><code class="language-javascript">componentDidMount() {
+    const query = new URLSearchParams(this.props.location.search);
+    for (let param of query.entries()) {
+        console.log(param); // yields ['start', '5']
+    }
+}
+</code></pre>
+<ul>
+<li><code>#something</code> şeklinde oluşturulan <em>hash</em> parametreleri de <code>props.location.hash</code> üzerinden alınır;</li>
+</ul>
+<pre><code class="language-javascript">&lt;Link to=&quot;/my-path#start-position&quot;&gt;Go to Start&lt;/Link&gt;
+</code></pre>
+<pre><code class="language-javascript">&lt;Link 
+    to={‌{
+        pathname: '/my-path',
+        hash: 'start-position'
+    }}
+    &gt;Go to Start&lt;/Link&gt;
+</code></pre>
+<hr />
+<ul>
+<li><code>&lt;Switch&gt;</code> componenti aynı anda tek route un render edilmesini sağlar. Aşağıdaki gibi durumlarda <code>path="/new-post"</code> ve <code>path="/:id"</code> üstüste bineceğinden, bu durumun önüne geçmek için <strong>switch</strong> kullanılabilir. Seçimi yukarıdan aşağıya doğru yapar.</li>
+</ul>
+<pre><code class="language-javascript">import {Route, NavLink, Switch} from 'react-router-dom';
+
+//...
+
+ &lt;Switch&gt;
+    &lt;Route path=&quot;/&quot; exact component={Posts} /&gt;
+    &lt;Route path=&quot;/new-post&quot; component={NewPost} /&gt;
+    &lt;Route path=&quot;/:id&quot; exact component={FullPost} /&gt;
+&lt;/Switch&gt;
+</code></pre>
+<ul>
+<li><code>&lt;Redirect&gt;</code> componenti yönlendirme için kullanılır. Url değişir.</li>
+</ul>
+<pre><code class="language-javascript">import {Route, NavLink, Switch, Redirect} from 'react-router-dom';
+
+//...
+
+&lt;Redirect from=&quot;/&quot; to=&quot;/posts&quot; /&gt;
+</code></pre>
+<ul>
+<li><strong>Redirect</strong> componenti bir işlem sonucunda yapılacak şekilde de kullanılabilir. Örneğin bi statte değişkeninin durumuna göre sayfa yönlendirilebilir.</li>
+</ul>
+<pre><code class="language-javascript">//...
+
+let redirect = null;
+if(this.state.submitted){
+    redirect = &lt;Redirect to=&quot;/posts&quot; /&gt;
+}
+return (
+    &lt;div className=&quot;NewPost&quot;&gt;
+        {redirect}
+        &lt;h1&gt;Add a Post&lt;/h1&gt;
+
+//...
+</code></pre>
+<blockquote>
+<p><strong><em>Not:</em></strong> <em>Redirect yerine daha pratik şekilde state güncelleme anında</em> <strong><em>props.history.replace</em></strong> <em>fonksiyonu da kullanılabilir. replace fonksiyonunun push fonksiyonundan farkı historyi korumamasıdır. push yapıldığında browserda önceki sayfaya dönülebilir ama replacede dönülemez.</em></p>
+<p><strong><em>Not:</em></strong> <em>Yetkiye sayfaların gizlenmesi ya da açılması, state üzerinde tutulacak bi değişkenle route ların şartlı yazılması ile yapılabilir ya da ilgili sayfanın componentDidMount methodunda yetki olup olmadığı kontrol edilerek redirect yapılabilir.</em></p>
+</blockquote>
+<hr />
+<p><strong>Lazy Loading with Suspense</strong></p>
+<p>Routing sırasında her sayfada tüm jacascript tekrar yükleniyor, sadece seçili componentin yüklenmesi isteniyorsa lazy loading yöntemleri kullanılır.</p>
+<ol>
+<li>yöntemde aşağıdaki gibi oluşturulan <em>asyncComponent.js</em> dosyası</li>
+</ol>
+<pre><code class="language-javascript">import React, { Component } from &quot;react&quot;
+
+const asyncComponent = (importComponent) =&gt; {
+    return class extends Component {
+        state = {
+            component: null
+        }
+
+        componentDidMount () {
+            importComponent()
+                .then(cmp =&gt; {
+                    this.setState({
+                        component: cmp.default
+                    });
+                });
+        }
+
+        render () {
+            const C = this.state.component;
+
+            return C ? &lt;C {...this.props} /&gt; : null;
+        }
+    }
+}
+
+export default asyncComponent;
+</code></pre>
+<p>componentin kullanılacağı routing dosyası içinde aşağıdaki şekilde import edilelerek kullanılır.</p>
+<pre><code class="language-javascript">//...
+
+import asyncComponent from '../../hoc/asyncComponent'
+const AsyncNewPost = asyncComponent(() =&gt; {
+    return import('./NewPost/NewPost');
+});
+
+//...
+
+&lt;Route path=&quot;/new-post&quot; component={AsyncNewPost} /&gt;
+</code></pre>
+<ol>
+<li>yöntemde ise react v16.6 ve sonrasında gelen yeni özellikler ile birlikte aşağıdaki gibi kullanılabilir. Yine bu versiyonla gelen Suspense özelliği ise component yüklenene kadar işlem yapılmasını sağlar. </li>
+</ol>
+<pre><code class="language-javascript">import React, { Component, Suspense } from 'react';
+
+const Posts = React.lazy(() =&gt; import('./containers/Posts'));
+
+
+&lt;Suspense fallback={&lt;div&gt;Loading...&lt;/div&gt;}&gt;
+    &lt;Posts /&gt;
+&lt;/Suspense&gt;
+
+</code></pre>
+<ul>
+<li>Eğer uygulama <em>example.com</em> gibi değil de <em>example.com/myapp</em> şeklinde bi path altında çalışacaksa bunun reactte tanımlanması gerekir ve aşağıdaki gibi yapılır.</li>
+</ul>
+<pre><code class="language-javascript">&lt;BrowserRouter basename=&quot;/myapp&quot;&gt;
+...
+&lt;/BrowserRouter&gt;
+</code></pre>
+<ul>
+<li>Son olarak routing yukarıdan aşağıya sırayla çalıştığı için en sonda bir <em>Not Found Page</em> bölümü yapmak gerekir çünkü browser her halükarda index.html i açacaktır.</li>
+</ul>
+<pre><code class="language-javascript">&lt;Route render={() =&gt; &lt;h1&gt;Not Found&lt;/h1&gt;} /&gt;
+</code></pre>
+<ul>
+<li>Döküman: https://reacttraining.com/react-router/web/guides/philosophy</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
