@@ -9,6 +9,6 @@ nav:
   - Cloud: cloud/index.md
   - Architecture: architecture/index.md
   - AI: ai/index.md
-  - React: react/router.md
+  - React: reactjs/router.md
 plugins:
   - search
