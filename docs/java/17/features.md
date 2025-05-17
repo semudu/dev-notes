@@ -1,25 +1,51 @@
-# Java 17 - Yeni Özellikler
+# Java 17 - Yeni Özellikler ve Derinlemesine Açıklamalar
 
-## 1. Pattern Matching for switch (Örüntü Eşleme)
-Switch ifadelerinde desen eşleme desteği ile daha okunabilir ve güvenli kod yazımı.
+## 1. Pattern Matching for switch
+### 1.1 Desen Eşleme ile Switch
+- Switch ifadelerinde tip kontrolü ve desen eşleme desteği.
+- Kodun daha okunabilir ve güvenli olması.
+- Özellikle sealed class ve record ile birlikte güçlü kullanım.
+
+### 1.2 Kullanım Senaryosu
+- Farklı veri tiplerinin ayrıştırılması, polimorfik işlemler.
 
 ## 2. Sealed Classes
-Sınıf hiyerarşisinin sınırlandırılması ve daha güvenli miras yapısı.
+### 2.1 Sınıf Hiyerarşisinin Sınırlandırılması
+- Sadece izin verilen alt sınıfların türetilebilmesi.
+- Güvenli ve öngörülebilir miras yapısı.
+
+### 2.2 Kullanım Senaryosu
+- API tasarımı, domain modelleme, polimorfizm.
 
 ## 3. Yeni Garbage Collector Seçenekleri
-- G1, ZGC ve Shenandoah gibi modern çöp toplayıcılar.
-- Performans ve gecikme iyileştirmeleri.
+### 3.1 G1, ZGC, Shenandoah
+- Modern, düşük gecikmeli ve yüksek performanslı çöp toplayıcılar.
+- Büyük ölçekli uygulamalarda bellek yönetimi avantajı.
 
 ## 4. Strongly Encapsulated JDK Internals
-JDK iç yapılarının daha sıkı kapsüllenmesi, güvenlik ve bakım kolaylığı.
+### 4.1 Kapsülleme ve Modülerlik
+- JDK iç yapılarının dışarıya kapatılması.
+- Güvenlik ve bakım kolaylığı.
 
-## 5. Foreign Function & Memory API (Önizleme)
-Java dışı kodlarla ve bellekle daha güvenli ve hızlı etkileşim.
+## 5. Foreign Function & Memory API (Preview)
+### 5.1 Native Kod ile Etkileşim
+- JNI’ye göre daha güvenli ve kolay native kütüphane çağrıları.
+- Java dışı kodlarla hızlı ve güvenli entegrasyon.
+
+### 5.2 Bellek Yönetimi
+- Java heap dışı bellekle güvenli çalışma.
 
 ## 6. Deprecation ve Kaldırılan Özellikler
-- Applet API, Security Manager gibi eski teknolojiler kaldırıldı veya kullanımdan kaldırıldı.
+### 6.1 Applet API, Security Manager
+- Eski teknolojilerin kaldırılması veya kullanımdan kaldırılması.
+- Modern güvenlik ve uygulama mimarilerine geçiş.
 
 ## 7. Küçük Dil ve API Geliştirmeleri
-- Stream.toList(), RandomGenerator API, yeni String ve Collection metotları.
+### 7.1 Stream.toList(), RandomGenerator API
+- Koleksiyon işlemlerinde kolaylık.
+- Yeni rastgele sayı üreticileri.
 
-Detaylar ve örnekler için diğer dosyalara ve resmi dökümana bakınız.
+### 7.2 Yeni String ve Collection Metotları
+- Kodun okunabilirliğini ve güvenliğini artıran küçük iyileştirmeler.
+
+Her başlık altında örnekler ve kullanım detayları için examples.md dosyasına bakınız.

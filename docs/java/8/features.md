@@ -1,46 +1,45 @@
-# Java 8 - Yeni Özellikler
+# Java 8 - Yeni Özellikler ve Derinlemesine Açıklamalar
 
 ## 1. Lambda İfadeleri
-Fonksiyonel programlamayı destekler, kodun daha kısa ve okunabilir olmasını sağlar.
-```java
-List<String> list = Arrays.asList("a", "b", "c");
-list.forEach(item -> System.out.println(item));
-```
+### 1.1 Fonksiyonel Programlama Desteği
+- Fonksiyonları değişken olarak kullanabilme.
+- Kodun daha kısa, okunabilir ve fonksiyonel olmasını sağlar.
+- Özellikle koleksiyon işlemlerinde büyük kolaylık.
+
+### 1.2 Kullanım Senaryosu
+- Event handling, callback, koleksiyon işlemleri.
 
 ## 2. Stream API
-Koleksiyonlar üzerinde fonksiyonel işlemler yapılmasına olanak tanır.
-```java
-List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
-int toplam = numbers.stream().filter(n -> n % 2 == 0).mapToInt(Integer::intValue).sum();
-```
+### 2.1 Fonksiyonel Koleksiyon İşlemleri
+- Map, filter, reduce gibi fonksiyonel işlemler.
+- Zincirleme veri işleme ve pipeline oluşturma.
+
+### 2.2 Paralel Stream
+- Büyük veri setlerinde paralel işleme ile performans artışı.
+- Thread yönetimi otomatik olarak yapılır.
 
 ## 3. Yeni Tarih/Zaman API’si (java.time)
-Modern ve güvenli tarih/zaman işlemleri sağlar.
-```java
-import java.time.LocalDate;
-LocalDate today = LocalDate.now();
-```
+### 3.1 Modern ve Güvenli Tarih/Zaman İşlemleri
+- Immutable ve thread-safe tarih/zaman nesneleri.
+- LocalDate, LocalTime, ZonedDateTime gibi yeni sınıflar.
+
+### 3.2 Kullanım Senaryosu
+- Zaman dilimi yönetimi, tarih aritmetiği, formatlama/parsing.
 
 ## 4. Varsayılan ve Statik Arayüz Metotları
-Arayüzlerde gövdesi olan metotlar tanımlanabilir.
-```java
-interface MyInterface {
-    default void hello() { System.out.println("Hello"); }
-    static void bye() { System.out.println("Bye"); }
-}
-```
+### 4.1 Default Methods
+- Arayüzlerde gövdeli metot tanımlama.
+- Geriye dönük uyumluluk ve API evrimi.
+
+### 4.2 Static Methods
+- Arayüzde yardımcı metotların doğrudan tanımlanabilmesi.
 
 ## 5. Optional Sınıfı
-NullPointerException riskini azaltır.
-```java
-Optional<String> isim = Optional.ofNullable(null);
-System.out.println(isim.orElse("Varsayılan"));
-```
+### 5.1 Null Güvenliği
+- NullPointerException riskini azaltır.
+- Değerin olup olmadığını fonksiyonel olarak kontrol etme.
 
-## 6. Paralel Stream
-Veri işleme işlemlerini paralel olarak gerçekleştirebilir.
-```java
-int toplam = numbers.parallelStream().mapToInt(Integer::intValue).sum();
-```
+### 5.2 Kullanım Senaryosu
+- API dönüşlerinde null yerine Optional kullanımı.
 
-Daha fazla detay ve örnekler için diğer dosyalara bakınız.
+Her başlık altında örnekler ve kullanım detayları için examples.md dosyasına bakınız.

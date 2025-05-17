@@ -30,6 +30,11 @@ nav:
           - Özellikler: java/21/features.md
           - Örnekler: java/21/examples.md
           - Geçiş Notları: java/21/migration.md
+      - Java 24:
+          - Özet: java/24/summary.md
+          - Özellikler: java/24/features.md
+          - Örnekler: java/24/examples.md
+          - Geçiş Notları: java/24/migration.md
   - Spring: spring/index.md
   - Middleware: middleware/index.md
   - Cloud: cloud/index.md
