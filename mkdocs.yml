@@ -3,7 +3,33 @@ theme:
   name: material
 nav:
   - Home: index.md
-  - Java: java/index.md
+  - Java:
+      - Genel: java/index.md
+      - Java 1.6:
+          - Özet: java/1.6/summary.md
+          - Özellikler: java/1.6/features.md
+          - Örnekler: java/1.6/examples.md
+          - Geçiş Notları: java/1.6/migration.md
+      - Java 8:
+          - Özet: java/8/summary.md
+          - Özellikler: java/8/features.md
+          - Örnekler: java/8/examples.md
+          - Geçiş Notları: java/8/migration.md
+      - Java 11:
+          - Özet: java/11/summary.md
+          - Özellikler: java/11/features.md
+          - Örnekler: java/11/examples.md
+          - Geçiş Notları: java/11/migration.md
+      - Java 17:
+          - Özet: java/17/summary.md
+          - Özellikler: java/17/features.md
+          - Örnekler: java/17/examples.md
+          - Geçiş Notları: java/17/migration.md
+      - Java 21:
+          - Özet: java/21/summary.md
+          - Özellikler: java/21/features.md
+          - Örnekler: java/21/examples.md
+          - Geçiş Notları: java/21/migration.md
   - Spring: spring/index.md
   - Middleware: middleware/index.md
   - Cloud: cloud/index.md
