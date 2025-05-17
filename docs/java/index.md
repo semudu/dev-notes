@@ -1,7 +1,1 @@
----
-title: Java
----
-
-## Overview
-
-Notes about Java will go here.
+<!-- Bu dosya, menüde java/basics.md ile kapsandığı için nav dışında bırakılmıştır. -->
