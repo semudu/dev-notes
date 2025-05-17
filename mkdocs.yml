@@ -1,48 +1,97 @@
-site_name: "My Dev Notes"
+site_name: "Java & Spring Başucu Kaynağı"
 theme:
   name: material
 nav:
-  - Home: index.md
+  - Anasayfa: index.md
   - Java:
-      - Genel: java/index.md
-      - Java 1.6:
-          - Özet: java/1.6/summary.md
-          - Özellikler: java/1.6/features.md
-          - Örnekler: java/1.6/examples.md
-          - Geçiş Notları: java/1.6/migration.md
-      - Java 8:
-          - Özet: java/8/summary.md
-          - Özellikler: java/8/features.md
-          - Örnekler: java/8/examples.md
-          - Geçiş Notları: java/8/migration.md
-      - Java 11:
-          - Özet: java/11/summary.md
-          - Özellikler: java/11/features.md
-          - Örnekler: java/11/examples.md
-          - Geçiş Notları: java/11/migration.md
-      - Java 17:
-          - Özet: java/17/summary.md
-          - Özellikler: java/17/features.md
-          - Örnekler: java/17/examples.md
-          - Geçiş Notları: java/17/migration.md
-      - Java 21:
-          - Özet: java/21/summary.md
-          - Özellikler: java/21/features.md
-          - Örnekler: java/21/examples.md
-          - Geçiş Notları: java/21/migration.md
-      - Java 24:
-          - Özet: java/24/summary.md
-          - Özellikler: java/24/features.md
-          - Örnekler: java/24/examples.md
-          - Geçiş Notları: java/24/migration.md
-  - Spring: spring/index.md
-  - Middleware: middleware/index.md
-  - Cloud: cloud/index.md
-  - Architecture: architecture/index.md
-  - AI: ai/index.md
-  - ReactJS: 
-      - ReactJS: reactjs/index.md
-      - ReactJS Router:
-          - Overview: reactjs/router/overview.md
+      - Sürüm Notları:
+          - Java 1.6: 
+              - Özet: java/1.6/summary.md
+              - Özellikler: java/1.6/features.md
+              - Örnekler: java/1.6/examples.md
+              - Geçiş Notları: java/1.6/migration.md
+          - Java 8:
+              - Özet: java/8/summary.md
+              - Özellikler: java/8/features.md
+              - Örnekler: java/8/examples.md
+              - Geçiş Notları: java/8/migration.md
+          - Java 11:
+              - Özet: java/11/summary.md
+              - Özellikler: java/11/features.md
+              - Örnekler: java/11/examples.md
+              - Geçiş Notları: java/11/migration.md
+          - Java 17:
+              - Özet: java/17/summary.md
+              - Özellikler: java/17/features.md
+              - Örnekler: java/17/examples.md
+              - Geçiş Notları: java/17/migration.md
+          - Java 21:
+              - Özet: java/21/summary.md
+              - Özellikler: java/21/features.md
+              - Örnekler: java/21/examples.md
+              - Geçiş Notları: java/21/migration.md
+          - Java 24:
+              - Özet: java/24/summary.md
+              - Özellikler: java/24/features.md
+              - Örnekler: java/24/examples.md
+              - Geçiş Notları: java/24/migration.md
+      - Temel Java Konuları: java/basics.md
+      - İleri Java: java/advanced.md
+      - Java Performans ve Tuning: java/performance.md
+      - Java Güvenlik: java/security.md
+      - Java Interview Soruları: java/interview.md
+      - Java Troubleshooting: java/troubleshooting.md
+      - Java Migration Rehberleri: java/migration-guides.md
+  - Spring Ekosistemi:
+      - Spring Framework: spring/index.md
+      - Spring Boot: spring/boot.md
+      - Spring Data & JPA: spring/data.md
+      - Spring Security: spring/security.md
+      - Spring Cloud: spring/cloud.md
+      - Spring Integration & Messaging: spring/integration.md
+      - Spring Test & Mocking: spring/testing.md
+      - Spring Best Practices: spring/best-practices.md
+      - Spring Troubleshooting: spring/troubleshooting.md
+  - Middleware & Mimariler:
+      - Temel Kavramlar: middleware/basics.md
+      - Message Brokers: middleware/message-brokers.md
+      - API Gateway & Service Mesh: middleware/api-gateway.md
+      - Event-Driven Architecture: middleware/event-driven.md
+      - Middleware Best Practices: middleware/best-practices.md
+      - Middleware Troubleshooting: middleware/troubleshooting.md
+  - Cloud & DevOps:
+      - Cloud Native Java: cloud/native-java.md
+      - Kubernetes & Containerization: cloud/kubernetes.md
+      - CI/CD & Automation: cloud/cicd.md
+      - Observability & Monitoring: cloud/observability.md
+      - Cloud Security: cloud/security.md
+      - Cloud Migration: cloud/migration.md
+      - Cloud Best Practices: cloud/best-practices.md
+  - Yazılım Mimarisi:
+      - Temel Mimari Desenler: architecture/patterns.md
+      - Microservices: architecture/microservices.md
+      - DDD & Clean Architecture: architecture/ddd.md
+      - High Availability & Scalability: architecture/ha-scalability.md
+      - Performance & Cost Optimization: architecture/performance.md
+      - Security Architecture: architecture/security.md
+      - Architecture Interview Soruları: architecture/interview.md
+  - Problem Çözme & Sık Karşılaşılan Sorunlar:
+      - Java & JVM: troubleshooting/java.md
+      - Spring: troubleshooting/spring.md
+      - Database: troubleshooting/database.md
+      - Cloud: troubleshooting/cloud.md
+      - Middleware: troubleshooting/middleware.md
+      - Network: troubleshooting/network.md
+      - Genel Best Practices: troubleshooting/best-practices.md
+  - AI & Modern Teknolojiler:
+      - AI ile Yazılım Geliştirme: ai/index.md
+      - AI Destekli Kodlama: ai/coding.md
+      - AI ile Test Otomasyonu: ai/testing.md
+      - AI ile Monitoring & Observability: ai/observability.md
+  - Kaynaklar & Ek Notlar:
+      - Faydalı Linkler: resources/links.md
+      - Kitaplar & Makaleler: resources/books.md
+      - Sık Sorulan Sorular: resources/faq.md
+      - Kişisel Notlar: resources/notes.md
 plugins:
   - search
